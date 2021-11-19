@@ -5,3 +5,11 @@ Dependencies for Server Side:
 - express: framework for creating the routing of our application.
 - mongoose: creates models for our POSTs.
 - nodemon: prevents manual restarting of server when we make changes.
+
+Dependencies for Client Side:
+
+- axios: makes API requests.
+- moment: library for working with time and date.
+- react-file-base64: converts images.
+- redux: state management tool.
+- redux-thunk: used for asynchronous functins using redux.
