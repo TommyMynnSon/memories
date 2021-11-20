@@ -13,3 +13,4 @@ Dependencies for Client Side:
 - react-file-base64: converts images.
 - redux: state management tool.
 - redux-thunk: used for asynchronous functins using redux.
+- @material-ui/core: UI kit (works nice with React because a lot less styling is required)
