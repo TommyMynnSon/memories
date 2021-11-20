@@ -8,5 +8,6 @@ const router = express.Router();
 
 // Routes.
 router.get('/', getPosts);
+router.get('/', createPost);
 
 export default router;
