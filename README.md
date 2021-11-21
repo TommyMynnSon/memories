@@ -12,6 +12,7 @@ Dependencies for Client Side:
 - moment: library for working with time and date.
 - react-file-base64: converts images.
 - redux: state management tool.
-- react-redux: pairs with 'redux'
+- react-redux: pairs with 'redux'.
 - redux-thunk: used for asynchronous functins using redux.
-- @material-ui/core: UI kit (works nice with React because a lot less styling is required)
+- @material-ui/core: UI kit (works nice with React because a lot less styling is required).
+- @material-ui/icons: use icons provided by MUI.
