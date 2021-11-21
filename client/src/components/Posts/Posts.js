@@ -1,6 +1,13 @@
+// React
 import React from 'react';
-import Post from './Post/Post';
+
+// Redux
+
+// Material-UI
 import useStyles from './styles';
+
+// Components
+import Post from './Post/Post';
 
 const Posts = () => {
   const classes = useStyles();
