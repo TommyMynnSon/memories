@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 
 // Redux
 import { useDispatch } from 'react-redux';
+import { getPosts } from './actions/posts';
 
 // Material-UI
 import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
@@ -20,8 +21,8 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch();
-  }, []);
+    dispatch(getPosts());
+  }, [dispatch]);
 
   return (
     <Container maxidth="lg">
