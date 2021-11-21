@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 
 // Material-UI
 import useStyles from './styles';
+import { Grid, CircularProgress } from '@material-ui/core';
 
 // Components
 import Post from './Post/Post';
