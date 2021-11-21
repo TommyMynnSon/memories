@@ -10,7 +10,11 @@ import useStyles from './styles';
 
 const App = () => {
   const classes = useStyles();
-  const useDispatch = useDispatch();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch();
+  }, []);
 
   return (
     <Container maxidth="lg">
