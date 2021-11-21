@@ -1,6 +1,10 @@
 // React
 import React, { useState } from 'react';
 
+// Redux
+import { useDispatch } from 'react-redux';
+import { createPost } from '../../actions/posts';
+
 // Material-UI
 import useStyles from './styles';
 import { TextField, Button, Typography, Paper } from '@material-ui/core';
@@ -19,8 +23,12 @@ const Form = () => {
 
   const classes = useStyles();
 
-  const handleSubmit = () => {
+  const dispatch = useDispatch();
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    dispatch(createPost(postData));
   }
 
   const clear = () => {
