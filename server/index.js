@@ -18,7 +18,7 @@ app.use(cors());
 
 // MongoDB.
 const CONNECTION_URL = "mongodb+srv://tommyson:0000@cluster0.c1goa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 mongoose.connect(CONNECTION_URL)
   .then(() => app.listen(PORT, () => console.log(`Server listening on PORT ${PORT}`)))
