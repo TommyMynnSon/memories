@@ -27,6 +27,12 @@ const Form = ({ currentId, setCurrentId }) => {
 
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    if (post) {
+      setPostData(post);
+    }
+  }, [post]);
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
