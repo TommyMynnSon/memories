@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 // Redux
 import { useDispatch } from 'react-redux';
-import { createPost } from '../../actions/posts';
+import { createPost, updatePost } from '../../actions/posts';
 
 // Material-UI
 import useStyles from './styles';
@@ -12,7 +12,7 @@ import { TextField, Button, Typography, Paper } from '@material-ui/core';
 // React File Base64
 import FileBase from 'react-file-base64';
 
-const Form = () => {
+const Form = ({ currentId, setCurrentId }) => {
   const [postData, setPostData] = useState({
     creator: '',
     title: '',
@@ -28,7 +28,12 @@ const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    dispatch(createPost(postData));
+    if (currentId) {
+      dispatch(updatePost(currentId, postData));
+    } else {
+      dispatch(createPost(postData));
+    }
+
   }
 
   const clear = () => {

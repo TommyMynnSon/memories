@@ -1,5 +1,5 @@
 // React
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Redux
 import { useDispatch } from 'react-redux';
@@ -17,6 +17,8 @@ import Form from './components/Form/Form';
 import memories from './images/memories.png';
 
 const App = () => {
+  const [currentId, setCurrentId] = useState(null);
+
   const classes = useStyles();
   const dispatch = useDispatch();
 
@@ -34,10 +36,10 @@ const App = () => {
         <Container>
           <Grid container justifyContent="space-between" alignItems="stretch" spacing={3}>
             <Grid item xs={12} sm={7}>
-              <Posts />
+              <Posts setCurrentId={setCurrentId} />
             </Grid>
             <Grid item xs={12} sm={4}>
-              <Form />
+              <Form currentId={currentId} setCurrentId={setCurrentId} />
             </Grid>
           </Grid>
         </Container>
