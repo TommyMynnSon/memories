@@ -36,7 +36,7 @@ const Post = ({ post }) => {
         <Button size="small" color="primary" onClick={() => { }}>
           <ThumbUpAltIcon fontSize="small" />
           Like
-          {post.likeCoutn}
+          {post.likeCount}
         </Button>
         <Button size="small" color="primary" onClick={() => { }}>
           <DeleteIcon fontSize="small" />
