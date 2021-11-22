@@ -1,8 +1,8 @@
 // React
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Redux
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { createPost, updatePost } from '../../actions/posts';
 
 // Material-UI
@@ -20,6 +20,8 @@ const Form = ({ currentId, setCurrentId }) => {
     tags: '',
     selectedFile: ''
   });
+
+  const post = useSelector((state) => currentId ? state.posts.find((p) => p._id === currentId) : null);
 
   const classes = useStyles();
 
